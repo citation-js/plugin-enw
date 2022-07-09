@@ -153,7 +153,7 @@ const MAPPINGS = [
     target: 'title-short',
     when: {
       source: {
-        '0': [
+        0: [
           'Ancient Text',
           'Aggregated Database',
           'Artwork',
@@ -2183,7 +2183,7 @@ const MAPPINGS = [
     target: 'title',
     when: {
       source: {
-        '0': [
+        0: [
           'Aggregated Database',
           'Ancient Text',
           'Artwork',
@@ -2274,7 +2274,7 @@ const MAPPINGS = [
     target: 'original-title',
     when: {
       source: {
-        '0': [
+        0: [
           'Aggregated Database',
           'Ancient Text',
           'Artwork',
@@ -2365,7 +2365,7 @@ const MAPPINGS = [
     target: 'title',
     when: {
       source: {
-        '0': [
+        0: [
           'Aggregated Database',
           'Ancient Text',
           'Artwork',

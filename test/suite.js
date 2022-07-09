@@ -50,7 +50,7 @@ const apiTests = [
 %U https://hal.archives-ouvertes.fr/hal-03701250
 %X Lorem ipsum dolor sit amet
 %Z Computer Science [cs]Preprints, Working Papers, ...
-`,
+`
   },
   {
     name: 'pericles_16000463126',
@@ -169,7 +169,7 @@ describe('output', function () {
 })
 
 describe('outputSyntax', function () {
-  for (const { name, input, data, output = input } of apiTests) {
+  for (const { name, data } of apiTests) {
     it(name, async function () {
       const actual = plugins.input.chainLink(plugins.output.format('enw', data), { generateGraph: false })
       const expected = plugins.output.format('enw', data, { format: 'object' })

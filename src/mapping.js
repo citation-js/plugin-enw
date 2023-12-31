@@ -2182,274 +2182,22 @@ const MAPPINGS = [
     source: 'Q',
     target: 'title',
     when: {
-      source: {
-        0: [
-          'Aggregated Database',
-          'Ancient Text',
-          'Artwork',
-          'Audiovisual Material',
-          'Bill',
-          'Blog',
-          'Book',
-          'Case',
-          'Catalog',
-          'Chart or Table',
-          'Classical Work',
-          'Computer Program',
-          'Conference Paper',
-          'Conference Proceedings',
-          'Dataset',
-          'Edited Book',
-          'Electronic Article',
-          'Electronic Book',
-          'Equation',
-          'Figure',
-          'Film or Broadcast',
-          'Generic',
-          'Government Document',
-          'Grant',
-          'Hearing',
-          'Journal Article',
-          'Legal Rule or Regulation',
-          'Magazine Article',
-          'Manuscript',
-          'Map',
-          'Music',
-          'Newspaper Article',
-          'Online Database',
-          'Online Multimedia',
-          'Pamphlet',
-          'Patent',
-          'Personal Communication',
-          'Report',
-          'Standard',
-          'Statute',
-          'Thesis',
-          'Unpublished Work',
-          'Web Page'
-        ]
-      },
-      target: {
-        type: [
-          'article',
-          'article-journal',
-          'article-magazine',
-          'article-newspaper',
-          'bill',
-          'book',
-          'broadcast',
-          'classic',
-          'dataset',
-          'document',
-          'entry',
-          'figure',
-          'graphic',
-          'hearing',
-          'legal_case',
-          'legislation',
-          'manuscript',
-          'map',
-          'motion_picture',
-          'musical_score',
-          'pamphlet',
-          'paper-conference',
-          'patent',
-          'personal_communication',
-          'post',
-          'post-weblog',
-          'regulation',
-          'report',
-          'software',
-          'song',
-          'standard',
-          'thesis',
-          'webpage'
-        ],
-        'original-title': true
-      }
+      target: { 'original-title': true }
     }
   },
   {
     source: 'T',
     target: 'original-title',
     when: {
-      source: {
-        0: [
-          'Aggregated Database',
-          'Ancient Text',
-          'Artwork',
-          'Audiovisual Material',
-          'Bill',
-          'Blog',
-          'Book',
-          'Case',
-          'Catalog',
-          'Chart or Table',
-          'Classical Work',
-          'Computer Program',
-          'Conference Paper',
-          'Conference Proceedings',
-          'Dataset',
-          'Edited Book',
-          'Electronic Article',
-          'Electronic Book',
-          'Equation',
-          'Figure',
-          'Film or Broadcast',
-          'Generic',
-          'Government Document',
-          'Grant',
-          'Hearing',
-          'Journal Article',
-          'Legal Rule or Regulation',
-          'Magazine Article',
-          'Manuscript',
-          'Map',
-          'Music',
-          'Newspaper Article',
-          'Online Database',
-          'Online Multimedia',
-          'Pamphlet',
-          'Patent',
-          'Personal Communication',
-          'Report',
-          'Standard',
-          'Statute',
-          'Thesis',
-          'Unpublished Work',
-          'Web Page'
-        ],
-        Q: true
-      },
-      target: {
-        type: [
-          'article',
-          'article-journal',
-          'article-magazine',
-          'article-newspaper',
-          'bill',
-          'book',
-          'broadcast',
-          'classic',
-          'dataset',
-          'document',
-          'entry',
-          'figure',
-          'graphic',
-          'hearing',
-          'legal_case',
-          'legislation',
-          'manuscript',
-          'map',
-          'motion_picture',
-          'musical_score',
-          'pamphlet',
-          'paper-conference',
-          'patent',
-          'personal_communication',
-          'post',
-          'post-weblog',
-          'regulation',
-          'report',
-          'software',
-          'song',
-          'standard',
-          'thesis',
-          'webpage'
-        ]
-      }
+      source: { Q: true }
     }
   },
   {
     source: 'T',
     target: 'title',
     when: {
-      source: {
-        0: [
-          'Aggregated Database',
-          'Ancient Text',
-          'Artwork',
-          'Audiovisual Material',
-          'Bill',
-          'Blog',
-          'Book',
-          'Case',
-          'Catalog',
-          'Chart or Table',
-          'Classical Work',
-          'Computer Program',
-          'Conference Paper',
-          'Conference Proceedings',
-          'Dataset',
-          'Edited Book',
-          'Electronic Article',
-          'Electronic Book',
-          'Equation',
-          'Figure',
-          'Film or Broadcast',
-          'Generic',
-          'Government Document',
-          'Grant',
-          'Hearing',
-          'Journal Article',
-          'Legal Rule or Regulation',
-          'Magazine Article',
-          'Manuscript',
-          'Map',
-          'Music',
-          'Newspaper Article',
-          'Online Database',
-          'Online Multimedia',
-          'Pamphlet',
-          'Patent',
-          'Personal Communication',
-          'Report',
-          'Standard',
-          'Statute',
-          'Thesis',
-          'Unpublished Work',
-          'Web Page'
-        ],
-        Q: false
-      },
-      target: {
-        type: [
-          'article',
-          'article-journal',
-          'article-magazine',
-          'article-newspaper',
-          'bill',
-          'book',
-          'broadcast',
-          'classic',
-          'dataset',
-          'document',
-          'entry',
-          'figure',
-          'graphic',
-          'hearing',
-          'legal_case',
-          'legislation',
-          'manuscript',
-          'map',
-          'motion_picture',
-          'musical_score',
-          'pamphlet',
-          'paper-conference',
-          'patent',
-          'personal_communication',
-          'post',
-          'post-weblog',
-          'regulation',
-          'report',
-          'software',
-          'song',
-          'standard',
-          'thesis',
-          'webpage'
-        ],
-        'original-title': false
-      }
+      source: { Q: false },
+      target: { 'original-title': false }
     }
   },
   {
@@ -2457,29 +2205,16 @@ const MAPPINGS = [
     target: 'title',
     when: {
       source: {
-        0: ['Book Section', 'Dictionary', 'Electronic Chapter', 'Encyclopedia', 'Serial']
+        0: ['Book Section', 'Dictionary', 'Electronic Chapter', 'Encyclopedia', 'Serial'],
+        T: false
       },
-      target: {
-        type: ['chapter', 'entry-dictionary', 'entry-encyclopedia', 'periodical']
-      }
+      target: false
     }
   },
   {
     source: '&',
     target: 'title',
-    when: { source: { 0: ['Book Section', 'Serial'], 1: false }, target: false }
-  },
-  {
-    source: 'T',
-    target: 'container-title',
-    when: {
-      source: {
-        0: ['Book Section', 'Dictionary', 'Electronic Chapter', 'Encyclopedia', 'Serial']
-      },
-      target: {
-        type: ['chapter', 'entry-dictionary', 'entry-encyclopedia', 'periodical']
-      }
-    }
+    when: { source: { 0: ['Book Section', 'Serial'], 1: false, T: false }, target: false }
   },
   {
     source: 'R',

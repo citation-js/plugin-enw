@@ -103,11 +103,19 @@ const CONVERTERS = {
     }
   },
   DATE: {
-    toTarget (date, year) {
-      return date ? parseDate(date) : CONVERTERS.YEAR.toTarget(year)
+    toTarget (date) {
+      return parseDate(date)
     },
     toSource (date) {
-      return [formatDate(date), CONVERTERS.YEAR.toSource(date)]
+      return formatDate(date)
+    }
+  },
+  DATE_YEAR: {
+    toTarget (date, year) {
+      return date ? CONVERTERS.DATE.toTarget(date) : CONVERTERS.YEAR.toTarget(year)
+    },
+    toSource (date) {
+      return [CONVERTERS.DATE.toSource(date), CONVERTERS.YEAR.toSource(date)]
     }
   },
   YEAR: {
@@ -303,7 +311,7 @@ const MAPPINGS = [
     source: ['#', 'D'],
     target: 'issued',
     when: { source: { 0: ['Electronic Book'] }, target: false },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: '$',
@@ -470,19 +478,19 @@ const MAPPINGS = [
     source: ['8', '2'],
     target: 'issued',
     when: { source: { 0: ['Conference Proceedings'] }, target: false },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: ['8', 'D'],
     target: 'issued',
     when: { source: { 0: ['Patent'] }, target: { type: ['patent'] } },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: ['2', 'D'],
     target: 'issued',
     when: { source: { 0: ['Patent'], 8: false }, target: false },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: '3',
@@ -760,7 +768,7 @@ const MAPPINGS = [
       source: { 0: ['Aggregated Database', 'Online Database'] },
       target: false
     },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: '8',
@@ -850,7 +858,7 @@ const MAPPINGS = [
         ]
       }
     },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: '9',
@@ -2529,7 +2537,7 @@ const MAPPINGS = [
       source: { 0: ['Blog'] },
       target: { type: ['post', 'post-weblog'] }
     },
-    convert: CONVERTERS.DATE
+    convert: CONVERTERS.DATE_YEAR
   },
   {
     source: 'X',
@@ -2785,7 +2793,8 @@ const MAPPINGS = [
           'thesis'
         ]
       }
-    }
+    },
+    convert: CONVERTERS.DATE
   },
   {
     source: ']',

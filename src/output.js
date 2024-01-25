@@ -11,10 +11,22 @@ function formatRecord ({ fields }, lineEnding) {
   return record
 }
 
+function translateRecord (record) {
+  const fields = translator.convertToSource(record)
+
+  for (const field in fields) {
+    if (Array.isArray(fields[field]) && fields[field].length === 1) {
+      fields[field] = fields[field][0]
+    }
+  }
+
+  return { scheme: 'enw', fields }
+}
+
 export default {
   enw (csl, options = {}) {
     const { format = 'text', lineEnding = '\n' } = options
-    const records = csl.map(record => ({ scheme: 'enw', fields: translator.convertToSource(record) }))
+    const records = csl.map(translateRecord)
 
     if (format === 'object') {
       return records

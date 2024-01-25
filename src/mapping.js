@@ -121,7 +121,7 @@ const CONVERTERS = {
   },
   NAMES: {
     toTarget (names) {
-      return names.map(parseName)
+      return [].concat(names).map(parseName)
     },
     toSource (names) {
       return names.map(name => formatName(name, true))

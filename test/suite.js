@@ -149,6 +149,52 @@ const apiTests = [
       { type: 'thesis', genre: 'Horror' },
       { type: 'thesis', genre: 'PhD thesis' }
     ]
+  },
+  {
+    name: 'single author',
+    input: `%0 Journal Article
+%A Kerr, Graham S
+%T An optically thin view of the flaring chromosphere: non-thermal widths in a chromospheric condensation during an X-class solar flare
+%B Monthly Notices of the Royal Astronomical Society
+%D 2023
+%R 10.1093/mnras/stad3135
+%J Monthly Notices of the Royal Astronomical Society
+%V 527
+%N 2
+%P 2523-2548
+%@ 0035-8711
+%[ 12/7/2023
+%U https://doi.org/10.1093/mnras/stad3135`,
+    data: [
+      {
+        type: 'article-journal',
+        author: [{ given: 'Graham S', family: 'Kerr' }],
+        title: 'An optically thin view of the flaring chromosphere: non-thermal widths in a chromospheric condensation during an X-class solar flare',
+        'container-title': 'Monthly Notices of the Royal Astronomical Society',
+        issued: { 'date-parts': [[2023]] },
+        DOI: '10.1093/mnras/stad3135',
+        volume: '527',
+        issue: '2',
+        page: '2523-2548',
+        ISSN: '0035-8711',
+        accessed: { 'date-parts': [[2023, 7, 12]] },
+        URL: 'https://doi.org/10.1093/mnras/stad3135'
+      }
+    ],
+    output: `%0 Journal Article
+%8 2023
+%D 2023
+%@ 0035-8711
+%A Kerr, Graham S
+%J Monthly Notices of the Royal Astronomical Society
+%N 2
+%P 2523-2548
+%T An optically thin view of the flaring chromosphere: non-thermal widths in a chromospheric condensation during an X-class solar flare
+%R 10.1093/mnras/stad3135
+%U https://doi.org/10.1093/mnras/stad3135
+%V 527
+%[ 2023-07-12
+`
   }
 ]
 

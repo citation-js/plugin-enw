@@ -1,6 +1,6 @@
 {
   "name": "@citation-js/plugin-enw",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Citation.js plugin for .enw files",
   "main": "lib/index.js",
   "scripts": {

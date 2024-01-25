@@ -1,3 +1,13 @@
+# [0.3.0](https://github.com/citation-js/plugin-enw/compare/v0.2.0...v0.3.0) (2024-01-25)
+
+
+### Bug Fixes
+
+* fix date parsing ([4475b65](https://github.com/citation-js/plugin-enw/commit/4475b6526279159d34d0b2c0cc2419ab0989a78f))
+* handle records with single authors ([1bbbbe0](https://github.com/citation-js/plugin-enw/commit/1bbbbe096faba031f05c34aa7c22e7c8f805ef96)), closes [#4](https://github.com/citation-js/plugin-enw/issues/4)
+
+
+
 # [0.2.0](https://github.com/citation-js/plugin-enw/compare/v0.1.0...v0.2.0) (2023-12-31)
 
 

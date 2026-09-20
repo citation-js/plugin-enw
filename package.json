@@ -12,9 +12,9 @@
     "changelog": "conventional-changelog -p angular && git add CHANGELOG.md",
     "coverage": "NODE_ENV=coverage nyc npm test",
     "report": "nyc report --reporter=lcov > coverage.lcov",
-    "preversion": "npm run lint && npm run test",
+    "preversion": "npm run lint && npm run type-check && npm run test",
     "version": "npm run changelog",
-    "postversion": "npm run babel"
+    "prepublishOnly": "npm run babel"
   },
   "repository": {
     "type": "git",

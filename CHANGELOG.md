@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/citation-js/plugin-enw/compare/v0.3.0...v0.4.0) (2026-09-20)
+
+* chore(deps)!: require Node.js 22.12.0 ([1ae51c1](https://github.com/citation-js/plugin-enw/commit/1ae51c1a042477f686903f02a1857b4d00fbb807))
+
+### BREAKING CHANGES
+
+* support for Node.js v16, v18, and v20 dropped
+
 # [0.3.0](https://github.com/citation-js/plugin-enw/compare/v0.2.0...v0.3.0) (2024-01-25)
 
 

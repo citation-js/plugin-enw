@@ -11,6 +11,7 @@
     "type-check": "tsc --noEmit test/types.ts",
     "changelog": "conventional-changelog -p angular && git add CHANGELOG.md",
     "coverage": "c8 --report-dir=.c8_output npm test",
+    "report": "c8 report --report-dir=.c8_output --reporter=lcov",
     "preversion": "npm run lint && npm run type-check && npm run test",
     "version": "npm run changelog"
   },

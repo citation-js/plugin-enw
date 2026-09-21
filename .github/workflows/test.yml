@@ -22,6 +22,7 @@ jobs:
     - run: npm run type-check
     - run: npm run coverage
 
+    - run: npm run report
     - uses: codecov/codecov-action@v7
       with:
         token: ${{ secrets.CODECOV_TOKEN }}

@@ -1,4 +1,4 @@
-import { translator } from './mapping'
+import { translator } from './mapping.js'
 
 function finalizeRecord (fields) {
   /* istanbul ignore else */

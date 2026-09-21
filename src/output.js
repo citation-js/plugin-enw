@@ -1,4 +1,4 @@
-import { translator } from './mapping'
+import { translator } from './mapping.js'
 
 function formatRecord ({ fields }, lineEnding) {
   let record = ''

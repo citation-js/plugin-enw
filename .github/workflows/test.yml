@@ -23,4 +23,6 @@ jobs:
     - run: npm run coverage
 
     - run: npm run report
-    - uses: codecov/codecov-action@v5
+    - uses: codecov/codecov-action@v7
+      with:
+        files: ./.c8_output/lcov.info
